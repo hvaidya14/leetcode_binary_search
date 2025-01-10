@@ -34,16 +34,7 @@ class Solution {
             if (nums[mid] == target) {
                 return true;
             } else {
-                if (nums[low] == nums[mid]) {
-                    if (searchLeft(low, mid) == false)
-                    {
-                        if (searchRight(mid, high) == true){
-                            break;
-                        }
-
-                    }
-                }
-                else if (nums[low] < nums[mid]){
+                if (nums[low] <= nums[mid]){
                     if (nums[low] <= target && target < nums[mid]) {
                         high = mid-1;
                     } else {
@@ -62,17 +53,9 @@ class Solution {
         return false;
         
     }
-
-    private boolean searchLeft(int low, int high) {
-        while (low <= high) {
-            int mid = low +(high-low)/2;
-            if (nums[mid] == target) {
-                
-            }
-        }
-        
-    }
 }
+
+
 
 
 // Problem
